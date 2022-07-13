@@ -1,0 +1,553 @@
+\documentclass [8pt] {extarticle}
+
+\usepackage {geometry}
+\usepackage {multicol}
+
+\geometry {
+    a4paper,
+    lmargin = 20mm,
+    tmargin = 10mm,
+    rmargin = 10mm,
+    bmargin = 10mm,
+}
+
+\parindent=0mm
+
+\pagestyle {empty}
+
+\setcounter {secnumdepth} {0}
+
+\begin {document}
+    \section {Built-in Functions}
+
+    \begin {multicols} {5}
+        abs() \\
+        aiter() \\
+        all() \\
+        any() \\
+        anext() \\
+        ascii() \\
+        bin() \\
+        bool() \\
+        breakpoint() \\
+        bytearray() \\
+        bytes() \\
+        callable() \\
+        chr() \\
+        classmethod() \\
+        compile() \\
+        complex() \\
+        delattr() \\
+        dict() \\
+        dir() \\
+        divmod() \\
+        enumerate() \\
+        eval() \\
+        exec() \\
+        filter() \\
+        float() \\
+        format() \\
+        frozenset() \\
+        getattr() \\
+        globals() \\
+        hasattr() \\
+        hash() \\
+        help() \\
+        hex() \\
+        id() \\
+        input() \\
+        int() \\
+        isinstance() \\
+        issubclass() \\
+        iter() \\
+        len() \\
+        list() \\
+        locals() \\
+        map() \\
+        max() \\
+        memoryview() \\
+        min() \\
+        next() \\
+        object() \\
+        oct() \\
+        open() \\
+        ord() \\
+        pow() \\
+        print() \\
+        property() \\
+        range() \\
+        repr() \\
+        reversed() \\
+        round() \\
+        set() \\
+        setattr() \\
+        slice() \\
+        sorted() \\
+        staticmethod() \\
+        str() \\
+        sum() \\
+        super() \\
+        tuple() \\
+        type() \\
+        vars() \\
+        zip() \\
+        \_\_import\_\_() \\
+    \end {multicols}
+
+    \section {Built-in Constants}
+
+    False \quad
+    True \quad
+    None \quad
+    NotImplemented \quad
+    Ellipsis \quad
+    \_\_debug\_\_
+
+    \section {The standard type hierarchy}
+
+    \begin {multicols} {2}
+
+    None
+
+    NotImplemented
+
+    Ellipsis
+
+    numbers.Number
+
+    \quad numbers.Integral
+
+    \qquad Integers (int)
+
+    \qquad Booleans (bool)
+
+    \quad numbers.Real (float)
+
+    \quad numbers.Complex (complex)
+
+    Sequences
+
+    \quad Immutable sequences
+
+    \qquad Strings
+
+    \qquad Tuples
+
+    \qquad Bytes
+
+    \quad Mutable sequences
+
+    \qquad Lists
+
+    \qquad Byte-Arrays
+
+    Set types
+
+    \quad Sets
+
+    \quad Frozen sets
+
+    Mappings
+
+    \quad Dictionaries
+
+    \columnbreak
+
+    Callable types
+
+    \quad User-defined functions
+
+    \quad Instance methods
+
+    \quad Generator functions
+
+    \quad Coroutine functions
+
+    \quad Asynchronous generator functions
+
+    \quad Built-in functions
+
+    \quad Built-in methods
+
+    \quad Classes
+
+    \quad Class Instances
+
+    Modules
+
+    Custom classes
+
+    Class instances
+
+    I/O objects (also known as file objects)
+
+    Internal types
+
+    \quad Code objects
+
+    \quad Frame objects
+
+    \quad Traceback objects
+
+    \quad Slice objects
+
+    \quad Static method objects
+
+    \quad Class method objects
+
+    \end {multicols}
+
+    \section {Modules}
+
+    \begin {multicols} {5}
+    abc \\
+    argparse \\
+    asyncio \\
+    base64 \\
+    calendar \\
+    collections \\
+    contextlib \\
+    copy \\
+    csv \\
+    dataclasses \\
+    datetime \\
+    decimal \\
+    enum \\
+    itertools \\
+    json \\
+    logging \\
+    math \\
+    numbers \\
+    operator \\
+    os \\
+    pathlib \\
+    pdb \\
+    pickle \\
+    pprint \\
+    profile \\
+    random \\
+    re \\
+    secrets \\
+    sqlite3 \\
+    statistics \\
+    string \\
+    sys \\
+    tempfile \\
+    time \\
+    typing \\
+    unittest \\
+    urllib \\
+    uuid \\
+    venv \\
+    zipfile \\
+    \end {multicols}
+
+    \section {Libs}
+
+    \begin {multicols} {5}
+
+    aiohttp \\
+    asgiref \\
+    dateutil \\
+    django \\
+    djangorestframework \\
+    celery \\
+    coverage \\
+    firebase-admin \\
+    flake8 \\
+    freezegun \\
+    gunicorn \\
+    isort \\
+    more-itertools \\
+    openpyxl \\
+    phonenumbers \\
+    pillow \\
+    poetry \\
+    psycopg2-binary \\
+    pycryptodome \\
+    pyfakefs \\
+    pytest \\
+    pytz \\
+    pyyaml \\
+    redis \\
+    requests \\
+    responses \\
+    sentry-sdk \\
+    uWSGI \\
+    validators \\
+
+    \end {multicols}
+
+    \pagebreak
+
+    \section {Terms}
+
+    \begin {multicols} {5}
+        $ >>> $ \\
+        ... \\
+        2to3 \\
+        abstract base class \\
+        annotation \\
+        argument \\
+        asynchronous context manager \\
+        asynchronous generator \\
+        asynchronous generator iterator \\
+        asynchronous iterable \\
+        asynchronous iterator \\
+        attribute \\
+        awaitable \\
+        BDFL \\
+        binary file \\
+        borrowed reference \\
+        bytes-like object \\
+        bytecode \\
+        callback \\
+        class \\
+        class variable \\
+        coercion \\
+        complex number \\
+        context manager \\
+        context variable \\
+        contiguous \\
+        coroutine \\
+        coroutine function \\
+        CPython \\
+        decorator \\
+        descriptor \\
+        dictionary \\
+        dictionary comprehension \\
+        dictionary view \\
+        docstring \\
+        duck-typing \\
+        EAFP \\
+        expression \\
+        extension module \\
+        f-string \\
+        file object \\
+        file-like object \\
+        filesystem encoding and error handler \\
+        finder \\
+        floor division \\
+        function \\
+        function annotation \\
+        \_\_future\_\_ \\
+        garbage collection \\
+        generator \\
+        generator iterator \\
+        generator expression \\
+        generic function \\
+        generic type \\
+        GIL \\
+        global interpreter lock \\
+        hash-based pyc \\
+        hashable \\
+        IDLE \\
+        immutable \\
+        import path \\
+        importing \\
+        importer \\
+        interactive \\
+        interpreted \\
+        interpreter shutdown \\
+        iterable \\
+        iterator \\
+        key function \\
+        keyword argument \\
+        lambda \\
+        LBYL \\
+        locale encoding \\
+        list \\
+        list comprehension \\
+        loader \\
+        magic method \\
+        mapping \\
+        meta path finder \\
+        metaclass \\
+        method \\
+        method resolution order \\
+        module \\
+        module spec \\
+        MRO \\
+        mutable \\
+        named tuple \\
+        namespace \\
+        namespace package \\
+        nested scope \\
+        new-style class \\
+        object \\
+        package \\
+        parameter \\
+        path entry \\
+        path entry finder \\
+        path entry hook \\
+        path based finder \\
+        path-like object \\
+        PEP \\
+        portion \\
+        positional argument \\
+        provisional API \\
+        provisional package \\
+        Python 3000 \\
+        Pythonic \\
+        qualified name \\
+        reference count \\
+        regular package \\
+        \_\_slots\_\_ \\
+        sequence \\
+        set comprehension \\
+        single dispatch \\
+        slice \\
+        special method \\
+        statement \\
+        strong reference \\
+        text encoding \\
+        text file \\
+        triple-quoted string \\
+        type \\
+        type alias \\
+        type hint \\
+        universal newlines \\
+        variable annotation \\
+        virtual environment \\
+        virtual machine \\
+        Zen of Python \\
+    \end {multicols}
+
+    \section {PEPs}
+
+    \begin {multicols} {2}
+
+    7  Style Guide for C Code \\
+    8  Style Guide for Python Code \\
+    12  Sample reStructuredText PEP Template \\
+    20  The Zen of Python \\
+    202  List Comprehensions \\
+    203  Augmented Assignments \\
+    234  Iterators \\
+    249  Python Database API Specification v2.0 \\
+    255  Simple Generators \\
+    257  Docstring Conventions \\
+    274  Dict Comprehensions \\
+    279  The enumerate() built-in function \\
+    282  A Logging System \\
+    289  Generator Expressions \\
+    308  Conditional Expressions \\
+    311  Simplified Global Interpreter Lock Acquisition for ... \\
+    318  Decorators for Functions and Methods \\
+    327  Decimal Data Type \\
+    328  Imports: Multi-Line and Absolute/Relative \\
+    343  The "with" Statement \\
+    345  Metadata for Python Software Packages 1.2 \\
+    405  Python Virtual Environments \\
+    452  API for Cryptographic Hash Functions v2.0 \\
+    484  Type Hints \\
+    3107  Function Annotations \\
+    3119  Introducing Abstract Base Classes \\
+    3129  Class Decorators \\
+    3156  Asynchronous IO Support Rebooted: the "asyncio" Module \\
+    3333  Python Web Server Gateway Interface v1.0.1 \\
+
+    \end {multicols}
+
+    \section {Version History}
+
+    \begin {multicols} {2}
+
+    \subsection {3.10}
+
+    union types X | Y
+
+    structural pattern matching
+
+    parenthesized context managers
+
+    better error messages
+
+    TypeAlias
+
+    loop parameter removed from most asyncio high level api
+
+    \subsection {3.9}
+
+    dict merge and update operators \{\} | \{\}, |=, see tricks in gallery for 25.1.22
+
+    str.removeprefix(prefix) and str.removesuffix(suffix)
+
+    list[str]
+
+    new parser, based on PEG instead of LL
+
+    new str.replace() behavior
+
+    any valid expression can now be used as a decorator - loose decorators restrictions
+
+    zoneinfo and graphlib modules
+
+    typing.Annotated
+
+    \subsection {3.8}
+
+    assignment expressions :=
+
+    positional-only params / *
+
+    f-strings with '=' \{a=\}
+
+    as\_integer\_ratio() for bool, int, Fraction
+
+    N\{name\} in regexp
+
+    reversed() for dict and dictview
+
+    importlib.metadata module
+
+    asyncio.run() in stable api
+
+    datetime.fromisocalendar()
+
+    \subsection {3.7}
+
+    development mode
+
+    new modules: contextvars, dataclasses, importlib.resources
+
+    async, await are reserved keywords
+
+    breakpoint(), sys.brakepointhook()
+
+    asyncio improvements
+
+    asyncio.get\_running\_loop()
+
+    add nanoseconds support in time module
+
+    await and await for in f-strings
+
+    more than 255 function args are allowed
+
+    str.isascii()
+
+    datetime.fromisoformat()
+
+    decimal uses context vars to store decimal context
+
+    Path.is\_mount()
+
+    sqlite3.Connection.backup()
+
+    ZipFile compresslevel parameter
+
+    \subsection {3.6}
+
+    secrets module
+
+    ...
+
+    \subsection {3.5}
+
+    subprocess.run()
+
+    ...
+
+    \end {multicols}
+\end {document}
