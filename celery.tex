@@ -1,0 +1,423 @@
+\documentclass [8pt] {extarticle}
+
+\usepackage {geometry}
+\usepackage {multicol}
+
+\geometry {
+    a4paper,
+    lmargin = 20mm,
+    tmargin = 10mm,
+    rmargin = 10mm,
+    bmargin = 20mm,
+}
+
+\parindent=0mm
+
+\pagestyle {empty}
+
+\setcounter {secnumdepth} {0}
+
+\usepackage {enumitem}
+\setlist {nosep}
+
+\usepackage {titlesec}
+\titleformat \subsection
+    {\hyphenpenalty=10000 \bf} {\thesubsection~} {0mm} {}
+
+\begin {document}
+    \section {Celery Contents}
+
+    \begin {multicols} {2}
+
+    \begin {itemize}
+\item Copyright
+
+\item Getting Started
+    \begin {itemize}
+
+\item Introduction to Celery
+
+    \item Backends and Brokers
+    \item First Steps with Celery
+    \item Next Steps
+    \item Resources
+    \end {itemize}
+    \item User Guide
+        \begin {itemize}
+
+\item Application
+
+    \begin {itemize}
+        \item Main Name
+        \item Configuration
+        \item Laziness
+        \item Breaking the chain
+        \item Abstract Tasks
+    \end {itemize}
+
+\item Tasks
+
+    \begin {itemize}
+        \item Basics
+        \item Names
+        \item Task Request
+        \item Logging
+        \item Retrying
+        \item List of Options
+        \item States
+        \item Semipredicates
+        \item Custom task classes
+        \item How it works
+        \item Tips and Best Practices
+        \item Performance and Strategies
+        \item Example
+    \end {itemize}
+
+\item Calling Tasks
+
+    \begin {itemize}
+        \item Basics
+        \item Linking (callbacks/errbacks)
+        \item On message
+        \item ETA and Countdown
+        \item Expiration
+        \item Message Sending Retry
+        \item Connection Error Handling
+        \item Serializers
+        \item Compression
+        \item Connections
+        \item Routing options
+        \item Results options
+    \end {itemize}
+
+\item Canvas: Designing Work-flows
+
+    \begin {itemize}
+\item Signatures (Partials, Immutability, Callbacks)
+\item The Primitives (Chains, Groups, Chords, Map \& Starmap, Chunks)
+    \end {itemize}
+
+\item Workers Guide
+
+    \begin {itemize}
+        \item Starting the worker
+        \item Stopping the worker
+        \item Restarting the worker
+        \item Process Signals
+        \item Variables in file paths
+        \item Concurrency
+        \item Remote control
+        \item Commands
+        \item Time Limits
+        \item Rate Limits
+        \item Max tasks per child setting
+        \item Max memory per child setting
+        \item Autoscaling
+        \item Queues
+        \item Inspecting workers
+        \item Additional Commands
+        \item Writing your own remote control commands
+    \end {itemize}
+
+\item Daemonization
+
+    \begin {itemize}
+        \item Generic init-scripts (celeryd, celerybeat)
+        \item Usage systemd
+        \item Running the worker with superuser privileges (root)
+    \end {itemize}
+
+\item Periodic Tasks
+
+    \begin {itemize}
+\item Introduction
+\item Time Zones
+\item Entries
+\item \quad    Available Fields
+\item Crontab schedules
+\item Solar schedules
+\item Starting the Scheduler
+\item \quad   Using custom scheduler classes
+    \end {itemize}
+
+\item Routing Tasks
+
+    \begin {itemize}
+        \item Basics
+        \item Special Routing Options
+        \item AMQP Primer
+        \item Routing Tasks
+    \end {itemize}
+
+\item Monitoring and Management Guide
+
+    \begin {itemize}
+\item Workers (CLI, Flower - web-monitor, events - curses monitor)
+\item RabbitMQ
+\item Redis
+\item Munin
+\item Events
+\item Event Reference
+    \end {itemize}
+
+\item Security
+
+    \begin {itemize}
+\item Areas of Concern (Broker, Client, Worker)
+\item Serializers
+\item Message Signing
+\item Intrusion Detection (Logs, Tripwire)
+    \end {itemize}
+
+\item Optimizing
+\item Debugging
+\item Concurrency
+\item Signals
+
+    \begin {itemize}
+        \item Task Signals
+        \item App Signals
+        \item Worker Signals
+        \item Beat Signals
+        \item Eventlet Signals
+        \item Logging Signals
+        \item Command signals
+        \item Deprecated Signals
+    \end {itemize}
+
+\item Testing with Celery
+\item Extensions and Bootsteps
+
+    \begin {itemize}
+        \item Custom Message Consumers
+        \item Blueprints
+        \item Worker
+        \item Consumer
+        \item Installing Bootsteps
+        \item Command-line programs
+        \item Worker API
+    \end {itemize}
+
+\item Configuration and defaults
+
+    \begin {itemize}
+\item Example configuration file
+\item New lowercase settings
+\item Configuration Directives
+    \begin {itemize}
+        \item General settings
+        \item Time and date settings
+        \item Task settings
+        \item Task execution settings
+        \item Task result backend settings
+        \item Backend settings: \\
+        Database,
+        RPC,
+        Cache,
+        MongoDB,
+        Redis,
+        Cassandra,
+        S3,
+        Azure Block Blob,
+        Elasticsearch,
+        AWS DynamoDB,
+        IronCache,
+        Couchbase,
+        ArangoDB,
+        CosmosDB,
+        CouchDB,
+        File-system,
+        Consul K/V store
+        \item Message Routing
+        \item Broker Settings
+        \item Worker
+        \item Events
+        \item Remote Control Commands
+        \item Logging
+        \item Security
+        \item Custom Component Classes (advanced)
+        \item Beat Settings (celery beat)
+    \end {itemize}
+    \end {itemize}
+
+\item Documenting Tasks with Sphinx
+        \end {itemize}
+
+    \item Django
+    \item Contributing
+    \item Community Resources
+    \item Tutorials (Ensuring a task is only executed one at a time)
+    \item Frequently Asked Questions
+    \item Change history
+    \item What’s new in Celery 5.2 (Dawn Chorus)
+    \item API Reference
+    \item Internals
+    \item History
+    \item Glossary
+    \end {itemize}
+
+    \end {multicols}
+
+    \pagebreak
+
+    \section {Celery Glossary}
+
+\textbf {ack} \quad Short for acknowledged. \\
+\textbf {acknowledged} \quad Workers acknowledge messages to signify that a
+message has been handled. Failing to acknowledge a message will cause the
+message to be redelivered. Exactly when a transaction is considered a failure
+varies by transport. In AMQP the transaction fails when the connection/channel
+is closed (or lost), but in Redis/SQS the transaction times out after a
+configurable amount of time (the visibility\_timeout). \\
+\textbf {apply} \quad Originally a synonym to call but used to signify that a
+function is executed by the current process. \\
+\textbf {billiard} \quad Fork of the Python multiprocessing library containing
+improvements required by Celery. \\
+\textbf {calling} \quad Sends a task message so that the task function is
+executed by a worker. \\
+\textbf {context} \quad The context of a task contains information like the id
+of the task, it’s arguments and what queue it was delivered to. It can be
+accessed as the tasks request attribute. See Task Request \\
+\textbf {early ack} \quad Short for early acknowledgment \\
+\textbf {early acknowledgment} \quad Task is acknowledged just-in-time before
+being executed, meaning the task won’t be redelivered to another worker if the
+machine loses power, or the worker instance is abruptly killed, mid-execution.
+Configured using task\_acks\_late. \\
+\textbf {ETA} \quad “Estimated Time of Arrival”, in Celery and Google Task Queue,
+etc., used as the term for a delayed message that should not be processed
+until the specified ETA time. See ETA and Countdown.  \\
+\textbf {executing} \quad Workers execute task requests.  \\
+\textbf {idempotent} \quad Idempotence is a mathematical property that describes a
+function that can be called multiple times without changing the result.
+Practically it means that a function can be repeated many times without
+unintended effects, but not necessarily side-effect free in the pure sense
+(compare to nullipotent). \\
+ \\
+\textbf {kombu}    Python messaging library used by Celery to send and receive
+messages. \\
+\textbf {late ack}    Short for late acknowledgment \\
+\textbf {late acknowledgment}    Task is acknowledged after execution (both if
+successful, or if the task is raising an error), which means the task will be
+redelivered to another worker in the event of the machine losing power, or the
+worker instance being killed mid-execution. Configured using task\_acks\_late.
+\\
+\textbf {nullipotent} \quad describes a function that’ll have the same effect,
+and give the same result, even if called zero or multiple times (side-effect
+free). A stronger version of idempotent. \\
+\textbf {pidbox} \quad A process mailbox, used to implement remote control
+commands. \\
+\textbf {prefetch count} \quad Maximum number of unacknowledged messages a
+consumer can hold and if exceeded the transport shouldn’t deliver any more
+messages to that consumer. See Prefetch Limits. \\
+\textbf {prefetch multiplier} \quad The prefetch count is configured by using
+the worker\_prefetch\_multiplier setting, which is multiplied by the number of
+pool slots (threads/processes/greenthreads). \\
+\textbf {reentrant} \quad describes a function that can be interrupted in the
+middle of execution (e.g., by hardware interrupt or signal), and then safely
+called again later. Reentrancy isn’t the same as idempotence as the return
+value doesn’t have to be the same given the same inputs, and a reentrant
+function may have side effects as long as it can be interrupted; An idempotent
+function is always reentrant, but the reverse may not be true. \\
+\textbf {request} \quad Task messages are converted to requests within the
+worker. The request information is also available as the task’s context (the
+task.request attribute). \\
+
+\section {Celery FAQ}
+    \begin {multicols} {2}
+
+    \subsection {General}
+
+        What kinds of things should I use Celery for?
+
+    \subsection {Troubleshooting}
+
+        MySQL is throwing deadlock errors, what can I do?
+
+        The worker isn’t doing anything, just hanging
+
+        Task results aren’t reliably returning
+
+        Why is Task.delay/apply*/the worker just hanging?
+
+        Does it work on FreeBSD?
+
+        I’m having IntegrityError: Duplicate Key errors. Why?
+
+        Why aren’t my tasks processed?
+
+        Why won’t my Task run?
+
+        Why won’t my periodic task run?
+
+        How do I purge all waiting tasks?
+
+        I’ve purged messages, but there are still messages left in the queue?
+
+    \subsection {Results}
+
+        How do I get the result of a task if I have the ID that points there?
+
+    \subsection {Security}
+
+        Isn’t using pickle a security concern?
+
+        Can messages be encrypted?
+
+        Is it safe to run celery worker as root?
+
+    \subsection {Brokers}
+
+        Why is RabbitMQ crashing?
+
+        Can I use Celery with ActiveMQ/STOMP?
+
+        What features aren’t supported when not using an AMQP broker?
+
+    \subsection {Tasks}
+
+        How can I reuse the same connection when calling tasks?
+
+        sudo in a subprocess returns None
+
+        Why do workers delete tasks from the queue if they’re unable to process them?
+
+        Can I call a task by name?
+
+        Can I get the task id of the current task?
+
+        Can I specify a custom task\_id?
+
+        Can I use decorators with tasks?
+
+        Can I use natural task ids?
+
+        Can I run a task once another task has finished?
+
+        Can I cancel the execution of a task?
+
+        Why aren’t my remote control commands received by all workers?
+
+        Can I send some tasks to only some servers?
+
+        Can I disable prefetching of tasks?
+
+        Can I change the interval of a periodic task at runtime?
+
+        Does Celery support task priorities?
+
+        Should I use retry or acks\_late?
+
+        Can I schedule tasks to execute at a specific time?
+
+        Can I safely shut down the worker?
+
+        Can I run the worker in the background on [platform]?
+
+    \subsection {Django}
+
+        What purpose does the database tables created by django-celery-beat have?
+
+        What purpose does the database tables created by django-celery-results have?
+        \end {multicols}
+
+\end {document}
