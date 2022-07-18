@@ -17,6 +17,10 @@
 
 \setcounter {secnumdepth} {0}
 
+\usepackage {titlesec}
+\titleformat \subsection
+    {\hyphenpenalty=10000 \bf} {\thesubsection~} {0mm} {}
+
 \begin {document}
     \section {Built-in Functions}
 
@@ -238,6 +242,195 @@
 
     \end {multicols}
 
+    \pagebreak
+
+    \section {Special attributes and methods}
+    
+
+    \begin {multicols} {2}
+    \subsection {User-defined functions}
+    \_\_doc\_\_ \\
+    \_\_name\_\_ \\
+    \_\_qualname\_\_ \\
+    \_\_module\_\_ \\
+    \_\_defaults\_\_ \\
+    \_\_code\_\_ \\
+    \_\_globals\_\_ \\
+    \_\_dict\_\_ \\
+    \_\_closure\_\_ \\
+    \_\_annotations\_\_ \\
+    \_\_kwdefaults\_\_ \\
+
+    \columnbreak
+
+    \subsection {Modules}
+    \_\_name\_\_ \quad
+    \_\_doc\_\_ \quad
+    \_\_file\_\_ \quad
+    \_\_annotations\_\_ \quad
+
+    \subsection {Custom classes}
+    \_\_name\_\_ \\
+    \_\_module\_\_ \\
+    \_\_dict\_\_ \\
+    \_\_bases\_\_ \\
+    \_\_doc\_\_ \\
+    \_\_annotations\_\_ \\
+    \end {multicols}
+
+
+    \begin {multicols} {2}
+
+    \subsection {Basic customization}
+
+    \begin {multicols} {2}
+    \_\_new\_\_ \\
+    \_\_init\_\_ \\
+    \_\_del\_\_ \\
+    \_\_repr\_\_ \\
+    \_\_str\_\_ \\
+    \_\_bytes\_\_ \\
+    \_\_format\_\_ \\
+    \_\_lt\_\_ \\
+    \_\_le\_\_ \\
+    \_\_eq\_\_ \\
+    \_\_ne\_\_ \\
+    \_\_gt\_\_ \\
+    \_\_ge\_\_ \\
+    \_\_hash\_\_ \\
+    \_\_bool\_\_ \\
+    \end {multicols}
+
+    \subsection {Customizing attribute access}
+
+    \_\_getattr\_\_ \\
+    \_\_getattribute\_\_ \\
+    \_\_setattr\_\_ \\
+    \_\_delattr\_\_ \\
+    \_\_dir\_\_ \\
+    \_\_slots\_\_ \\
+
+    \columnbreak
+
+    \subsection {Customizing class creation}
+
+    classmethod \_\_init\_subclass\_\_ \\
+    \_\_set\_name\_\_ \\
+
+    \subsection {Customizing instance and subclass checks}
+
+    class.\_\_instancecheck\_\_ \\
+    class.\_\_subclasscheck\_\_ \\
+
+    \subsection {Emulating generic types}
+
+    classmethod \_\_class\_getitem\_\_(cls, key)
+
+    \subsection {Emulating callable objects}
+
+    \_\_call\_\_(self[, args...])
+
+    \end {multicols}
+
+    \subsection {Emulating container types}
+
+    \begin {multicols} {5}
+    \_\_len\_\_ \\
+    \_\_length\_hint\_\_ \\
+    \_\_getitem\_\_ \\
+    \_\_setitem\_\_ \\
+    \_\_delitem\_\_ \\
+    \_\_missing\_\_ \\
+    \_\_iter\_\_ \\
+    \_\_reversed\_\_ \\
+    \_\_contains\_\_ \\
+    \end {multicols}
+
+    \subsection {Emulating numeric types}
+
+    \begin {multicols} {5}
+    \_\_add\_\_ \\
+    \_\_sub\_\_ \\
+    \_\_mul\_\_ \\
+    \_\_matmul\_\_ \\
+    \_\_truediv\_\_ \\
+    \_\_floordiv\_\_ \\
+    \_\_mod\_\_ \\
+    \_\_divmod\_\_ \\
+    \_\_pow\_\_ \\
+    \_\_lshift\_\_ \\
+    \_\_rshift\_\_ \\
+    \_\_and\_\_ \\
+    \_\_xor\_\_ \\
+    \_\_or\_\_ \\
+    \_\_radd\_\_ \\
+    \_\_rsub\_\_ \\
+    \_\_rmul\_\_ \\
+    \_\_rmatmul\_\_ \\
+    \_\_rtruediv\_\_ \\
+    \_\_rfloordiv\_\_ \\
+    \_\_rmod\_\_ \\
+    \_\_rdivmod\_\_ \\
+    \_\_rpow\_\_ \\
+    \_\_rlshift\_\_ \\
+    \_\_rrshift\_\_ \\
+    \_\_rand\_\_ \\
+    \_\_rxor\_\_ \\
+    \_\_ror\_\_ \\
+    \_\_iadd\_\_ \\
+    \_\_isub\_\_ \\
+    \_\_imul\_\_ \\
+    \_\_imatmul\_\_ \\
+    \_\_itruediv\_\_ \\
+    \_\_ifloordiv\_\_ \\
+    \_\_imod\_\_ \\
+    \_\_ipow\_\_ \\
+    \_\_ilshift\_\_ \\
+    \_\_irshift\_\_ \\
+    \_\_iand\_\_ \\
+    \_\_ixor\_\_ \\
+    \_\_ior\_\_ \\
+    \_\_neg\_\_ \\
+    \_\_pos\_\_ \\
+    \_\_abs\_\_ \\
+    \_\_invert\_\_ \\
+    \_\_complex\_\_ \\
+    \_\_int\_\_ \\
+    \_\_float\_\_ \\
+    \_\_index\_\_ \\
+    \_\_round\_\_ \\
+    \_\_trunc\_\_ \\
+    \_\_floor\_\_ \\
+    \_\_ceil\_\_ \\
+    \end {multicols}
+
+    \begin {multicols} {2}
+    \subsection {With Statement Context Managers}
+
+    \_\_enter\_\_ \\
+    \_\_exit\_\_ \\
+
+    \subsection {Customizing positional arguments in class pattern matching}
+
+    \_\_match\_args\_\_ \\
+
+    \subsection {Awaitable Objects}
+
+    \_\_await\_\_ \\
+
+    \subsection {Asynchronous Iterators}
+
+    \_\_aiter\_\_ \\
+    \_\_anext\_\_ \\
+
+    \subsection {Asynchronous Context Managers}
+
+    \_\_aenter\_\_ \\
+    \_\_aexit\_\_ \\
+    \end {multicols}
+
+    \pagebreak
+
     \section {Modules}
 
     \begin {multicols} {5}
@@ -333,8 +526,6 @@
     Falcon \quad
     Sanic
 
-    \pagebreak
-
     \section {Code analysis and refactoring}
 
     coverage \quad
@@ -345,6 +536,8 @@
     pylint \quad
     pyright \quad
     vulture \quad
+
+    \pagebreak
 
     \section {Terms}
 
