@@ -1,6 +1,7 @@
 # Notes
 
-Printable notes, references, cheat sheets for personal use
+Printable notes, references, cheat sheets for personal use.
+Inspired by [Clojure Cheat Sheet](https://github.com/jafingerhut/clojure-cheatsheets/tree/master/pdf).
 
 <table>
   <tr>
