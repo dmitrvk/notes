@@ -1,5 +1,7 @@
 # Notes
 
+[![build](https://img.shields.io/github/workflow/status/dmitrvk/notes/build?color=ffffff&style=flat-square)](https://github.com/dmitrvk/notes/actions)
+
 Printable notes, references, cheat sheets for personal use.
 Inspired by [Clojure Cheat Sheet](https://github.com/jafingerhut/clojure-cheatsheets/tree/master/pdf).
 
