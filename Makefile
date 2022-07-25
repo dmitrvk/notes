@@ -3,8 +3,8 @@ all: python celery latex cli http remember
 LATEXMK_OPTIONS = -xelatex --interaction=nonstopmode --halt-on-error
 
 python:
-	latexmk $(LATEXMK_OPTIONS) -jobname=$@ notes/$@/main.tex
-	latexmk -c -jobname=$@ notes/$@/main.tex
+	latexmk $(LATEXMK_OPTIONS) -jobname=$@ notes/$@.tex
+	latexmk -c -jobname=$@ notes/$@.tex
 
 celery:
 	latexmk $(LATEXMK_OPTIONS) -jobname=$@ notes/$@.tex
